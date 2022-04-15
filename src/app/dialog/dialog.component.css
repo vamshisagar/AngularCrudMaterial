@@ -1,0 +1,16 @@
+mat-form-field{
+  width: 90%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
