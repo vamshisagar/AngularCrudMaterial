@@ -1,6 +1,6 @@
 # Material
 
-This is Angular CRUD Project with SweetAlert for alerts.
+This is Angular CRUD Project with Material UI and SweetAlert for alerts.
 
 ## Development server
 
