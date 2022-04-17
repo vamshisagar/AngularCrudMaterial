@@ -1,12 +1,36 @@
 {
   "productList": [
     {
+      "ProductName": "oneplus 9t",
+      "Category": "Electronics",
+      "ProductType": "New",
+      "Price": "3000",
+      "Comments": "Goood",
+      "id": 1
+    },
+    {
       "ProductName": "oneplus",
       "Category": "Electronics",
       "ProductType": "New",
-      "Price": "80000",
+      "Price": "3000",
+      "Comments": "Goood",
+      "id": 4
+    },
+    {
+      "ProductName": "oneplus",
+      "Category": "Electronics",
+      "ProductType": "New",
+      "Price": "3000",
+      "Comments": "Goood",
+      "id": 5
+    },
+    {
+      "ProductName": "Iphone",
+      "Category": "Electronics",
+      "ProductType": "New",
+      "Price": "90000",
       "Comments": "Good",
-      "id": 1
+      "id": 6
     }
   ],
   "posts": [

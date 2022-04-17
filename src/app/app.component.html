@@ -1,5 +1,70 @@
 <mat-toolbar color="primary">
-    <span>Angular Crud</span>
-    <span class="example-spacer"></span>
-    <button mat-raised-button color="accent" (click)="openDialog()" >Add Product</button>
+  <span>Angular Crud</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button color="accent" (click)="openDialog()">Add Product</button>
 </mat-toolbar>
+
+<div class="container">
+  <div class="style">
+    <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Oneplus" #input>
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="ProductName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ProductName </th>
+          <td mat-cell *matCellDef="let row"> {{row.ProductName | titlecase}} </td>
+        </ng-container>
+
+        <!-- Progress Column -->
+        <ng-container matColumnDef="Category">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+          <td mat-cell *matCellDef="let row"> {{row.Category | titlecase}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="ProductType">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Type </th>
+          <td mat-cell *matCellDef="let row"> {{row.ProductType | titlecase}} </td>
+        </ng-container>
+
+        <!-- Fruit Column -->
+        <ng-container matColumnDef="Price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+          <td mat-cell *matCellDef="let row"> {{row.Price | currency:'$'}} </td>
+        </ng-container>
+
+        <!-- Fruit Column -->
+        <ng-container  matColumnDef="Action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+          <td mat-cell *matCellDef="let row">
+            <div class="actionwidth">
+              <button mat-icon-button color="primary" (click)="editProduct(row)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteProduct(row.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+
+  </div>
+</div>
