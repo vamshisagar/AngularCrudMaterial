@@ -1,23 +1,7 @@
 {
   "productList": [
     {
-      "ProductName": "oneplus 9t",
-      "Category": "Electronics",
-      "ProductType": "New",
-      "Price": "3000",
-      "Comments": "Goood",
-      "id": 1
-    },
-    {
-      "ProductName": "oneplus",
-      "Category": "Electronics",
-      "ProductType": "New",
-      "Price": "3000",
-      "Comments": "Goood",
-      "id": 4
-    },
-    {
-      "ProductName": "oneplus",
+      "ProductName": "oneplus 8T",
       "Category": "Electronics",
       "ProductType": "New",
       "Price": "3000",
@@ -31,6 +15,14 @@
       "Price": "90000",
       "Comments": "Good",
       "id": 6
+    },
+    {
+      "ProductName": "Nokia",
+      "Category": "Electronics",
+      "ProductType": "Second Hand",
+      "Price": "9000",
+      "Comments": "Good",
+      "id": 7
     }
   ],
   "posts": [

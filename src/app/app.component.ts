@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-      width: '50%'
+      width: '40%'
     }).afterClosed().subscribe(val => {
       this.getAllProducts();
     })
